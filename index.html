@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Hemanth 🤍</title>
+
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fff4f5;
+  color: #653d4b;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+header {
+  padding: 55px 20px 35px;
+  background: #f9dce4;
+  border-bottom: 2px dashed #d78ca5;
+}
+h1 { font-size: clamp(2rem, 7vw, 3.5rem); }
+h2 { color: #b84f75; }
+p { line-height: 1.8; }
+section {
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 28px 22px;
+  background: #fffdf9;
+  border: 1px solid #f0c6d2;
+  border-radius: 20px;
+  box-shadow: 0 5px 18px #e7b6c433;
+}
+button {
+  background: #c65f85;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 7px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover { background: #a83f68; }
+.photo {
+  width: 100%;
+  max-width: 300px;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 4px solid white;
+}
+.note {
+  background: #fff0f3;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: left;
+  white-space: pre-line;
+}
+.memory {
+  border-left: 3px solid #d78ca5;
+  padding: 5px 15px;
+  margin: 18px 0;
+  text-align: left;
+}
+footer { padding: 25px; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <p>♡ A LITTLE SCRAPBOOK OF US ♡</p>
+  <h1>Hey, My Hemanth 🤍</h1>
+  <p>A little corner of the internet, made just for you.</p>
+  <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+    Open my heart 💌
+  </button>
+</header>
+
+<section>
+  <h2>Our little world 📸</h2>
+  <p>My favourite memories will always have you in them.</p>
+  <img class="photo" src="C:\Users\Kalpana A\Desktop\New folder\IMG_20250110_155316.jpg"
+       alt="Our favourite photo">
+  <p>Every photo has a story. You're my favourite one. 🤍</p>
+</section>
+
+<section id="letter">
+  <h2>A letter for you 💌</h2>
+  <div class="note">My dearest Hemanth,
+
+I know we're going through tough times now, but I will never want to make you sad.
+If I make you sad, I'm Sorry for everything 😔. Hope we will be ok.
+
+Please take care of your health when I'm not around you. Because in future you have to
+make some time with me and Ayira don't forget Ok😠.
+
+I'm Sorry for everything pattu. I love you Thango😘🪢. Miss you So much😖🫂.
+
+With all my love,
+Your girl 🤍</div>
+</section>
+
+<section>
+  <h2>Our timeline 🗓️</h2>
+  <div class="memory">
+    <h3>March 4, 2023 🤍</h3>
+    <p>The beginning of our love story.</p>
+    <img class="photo" src="first selfie.jpg"
+       alt="Our favourite photo">
+  </div>
+  <div class="memory">
+    <h3>Our favourite memories ✨</h3>
+    <p>Every laugh, every conversation, every little moment.</p>
+    <img class="photo" src="memories.jpg"
+       alt="Our favourite photo">
+  </div>
+  <div class="memory">
+    <h3>Our future 🌷</h3>
+    <p>More memories, more dreams, and more love to come.</p>
+     <img class="photo" src="Our Future.png"
+       alt="Our favourite photo">
+  </div>
+</section>
+
+<section>
+  <h2>How well do you know us? 🥰</h2>
+  <p id="question">Who is my favourite person?</p>
+  <button onclick="answer('wrong')">My phone 😂</button>
+  <button onclick="answer('right')">Hemanth 🤍</button>
+  <p id="result" aria-live="polite"></p>
+</section>
+
+<section>
+  <h2>A little music for us 🎵</h2>
+  <p>Press play for our little moment together.</p>
+  <<audio controls loop>
+  <source src="./music.mp3.mp3" type="audio/mpeg">
+</audio>
+</section>
+
+<section>
+  <h2>One last thing... 💕</h2>
+  <p>Hey Hemanth, I have one little surprise for you! 🥹🤍</p>
+
+  <button type="button" id="surpriseButton">
+   Open your surprise
+  </button>
+
+  <div id="surpriseBox" style="display: none;">
+    <p>
+      My favourite person, my happiest place,
+      and my forever love. 🤍
+    </p>
+
+    <video
+      id="surpriseVideo"
+      controls
+      playsinline
+      preload="metadata"
+      style="
+        width: 100%;
+        max-width: 420px;
+        border-radius: 18px;
+        border: 4px solid white;
+        box-shadow: 0 5px 18px #e7b6c4;
+      "
+    >
+      <source src="./Surprise.mp4"type="video/mp4">
+    </video>
+
+    <p>
+      If I could choose again, I'd still choose you.
+      I love you, Hemanth. Today and always! 🤍🥹
+    </p>
+  </div>
+</section>
+
+<footer>
+  Made with love, just for you. ♡<br>
+  Forever your girl 🤍
+</footer>
+
+<script>
+function answer(choice) {
+  const result = document.getElementById("result");
+  if (choice === "right") {
+    result.textContent = "Correct! You have my whole heart, Hemanth! 🤍";
+  } else {
+    result.textContent = "Haha, try again! You know the answer. 😘";
+  }
+}
+
+async function toggleMusic() {
+  const song = document.getElementById("song");
+  const button = document.getElementById("musicButton");
+  const status = document.getElementById("musicStatus");
+
+  if (song.paused) {
+    try {
+      await song.play();
+      button.textContent = "Pause our song ⏸️";
+      status.textContent = "Playing our song 🤍";
+    } catch (error) {
+      status.textContent =
+        "Please check that music.mp3 is in the website folder.";
+    }
+  } else {
+    song.pause();
+    button.textContent = "Play our song ▶️";
+    status.textContent = "Music paused.";
+  }
+}
+
+document.getElementById("surpriseButton").addEventListener("click", async function () {
+  const box = document.getElementById("surpriseBox");
+  const video = document.getElementById("surpriseVideo");
+
+  box.style.display = "block";
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  try {
+    await video.play();
+  } catch (error) {
+    console.log("Video playback issue:", error);
+  }
+});
+</script>
+
+</body>
+</html>
